@@ -3,8 +3,52 @@ table, th, td{
     text-align: center;
 }
 
-td, th{
-    text-align: center;
-    width: 10%;
+table{
+    background-color: gainsboro;
 }
 
+td, th{
+    text-align: center;
+    width: 19%;
+}
+
+.hora{
+    width: 5%;
+    background-color: gainsboro;
+}
+
+.assignatura{
+    height: 55px;
+}
+
+.cabecera{
+    background-color: gainsboro;
+}
+
+.programacio{
+    background-color: blue;
+}
+
+.bbdd{
+    background-color: yellow;
+}
+
+.marques{
+    background-color: green;
+}
+
+.pati{
+    background-color: orange;
+}
+
+.fol{
+    background-color: purple;
+}
+
+.sistemes{
+    background-color: rgb(0, 191, 255)
+}
+
+.entorns{
+    background-color: rgb(255, 75, 105);
+}
