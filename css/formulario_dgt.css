@@ -1,0 +1,17 @@
+table, th, td{
+    border: 2px solid black;
+    text-align: center;
+}
+
+table{
+    background-color: gainsboro;
+}
+
+td, th{
+    text-align: center;
+    width: 1%;
+}
+
+.bolita{
+    border: black;
+}
