@@ -1,0 +1,69 @@
+/* Posicions: relatives o absolutes
+Altures:
+  body: tot l'espai de la finestra
+  header: 20%
+  main: 70 %
+  footer: 10%
+Amplaries:
+  Main o articles: 75%
+  aside: 25%
+  article: 45%;
+*/
+
+body {
+    height: 100vh;
+}
+
+header {
+    background-color: fuchsia;
+    height: 20%;
+    position: relative;
+}
+
+footer {
+    background-color: fuchsia;
+    height: 10%;
+    position: relative;
+}
+
+main {
+    position: ;
+    background-color: gray;
+    height: 70%;
+    width: 75%;
+}
+
+main h1{
+    background-color: goldenrod;
+    position: relative;
+    text-align: center;
+}
+
+aside {
+    position: absolute;
+    right: 15px;
+    top: 25%;
+    width: 25%;
+}
+
+#articles {
+    background-color: white;
+    position: relative;
+    text-align: center;
+    width: 45%;
+    margin-left: 27.5%;
+    align-items: center;
+}
+
+#article1 {
+    position: absolute;
+    width: 45%;
+    border: black;
+    border-width: 2px;
+}
+
+#article2 {
+    position: absolute;
+    width: 45%;
+    right: 0%;
+}
