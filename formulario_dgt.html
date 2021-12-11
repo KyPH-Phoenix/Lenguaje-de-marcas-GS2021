@@ -10,71 +10,141 @@
 </head>
 
 <body>
-    <div>
-        <form action="formulario_dgt.html">
-        <table>
-            <tr>
-                <td colspan="3">
-                    <input type="radio" name="tramite">
-                    Canvio de titularidad
-                </td>
-                <td colspan="3">
-                    <input type="radio" name="tramite">
-                    Notificación de venta
-                </td>
-            </tr>
-        </table>
-    </div>
+    <h1>CAMBIO DE TITULARIDAD I NOITIFICACIÓN DE VENTA DE VEHÍCULOS</h1>
+    <br>
+    <form>
+        <button type="submit">Imprimir</button>
+        <div>
+            <p>CAMBIO DE TITULARIDAD <input type="radio" name="radio1"></p>
+        </div>
+
+        <div>
+            <p>NOTIFICACIÓN DE VENTA <input type="radio" name="radio1"></p>
+        </div>
+    </form>
     <br>
     <div>
-        <table>
-            <tr>
-                <th colspan="6">DATOS DEL VEHÍCULO</th>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <span>Matrícula:</span><br>
-                    <input type="text"  name="Matrícula" maxlength="10">
-                </td>
-                <td colspan="3">
-                    <span>Fecha de matriculación (dd/mm/aaaa):</span><br>
-                    <input type="text"  name="Fecha matriculación">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <span>Sevicio al que se destina el vehículo:</span><br>
-                    <select name="Servicio al que se destina el vehículo" style="font-size: 10px;"><option value="    " style="font-size: calc(10px * var(--zoom-factor));" selected="true">    </option><option value="A-00 Público Sin especificar" style="font-size: calc(10px * var(--zoom-factor));">A-00 Público Sin especificar</option><option value="A-01 Alquiler SIN conductor" style="font-size: calc(10px * var(--zoom-factor));">A-01 Alquiler SIN conductor</option><option value="A-02 Alquiler CON conductor" style="font-size: calc(10px * var(--zoom-factor));">A-02 Alquiler CON conductor</option><option value="A-03 Aprendizaje conducción    " style="font-size: calc(10px * var(--zoom-factor));">A-03 Aprendizaje conducción    </option><option value="A-04 Taxi" style="font-size: calc(10px * var(--zoom-factor));">A-04 Taxi</option><option value="A-05 Auxilio en carretera" style="font-size: calc(10px * var(--zoom-factor));">A-05 Auxilio en carretera</option><option value="A-07 Ambulancia " style="font-size: calc(10px * var(--zoom-factor));">A-07 Ambulancia </option><option value="A-08 Funerario" style="font-size: calc(10px * var(--zoom-factor));">A-08 Funerario</option><option value="A-10 Mercancías peligrosas " style="font-size: calc(10px * var(--zoom-factor));">A-10 Mercancías peligrosas </option><option value="A-11 Basurero " style="font-size: calc(10px * var(--zoom-factor));">A-11 Basurero </option><option value="A-12 Transporte escolar" style="font-size: calc(10px * var(--zoom-factor));">A-12 Transporte escolar</option><option value="A-13 Policía" style="font-size: calc(10px * var(--zoom-factor));">A-13 Policía</option><option value="A-14 Bomberos " style="font-size: calc(10px * var(--zoom-factor));">A-14 Bomberos </option><option value="A-15 Protección civil y salvamento " style="font-size: calc(10px * var(--zoom-factor));">A-15 Protección civil y salvamento </option><option value="A-16 Ministerio de Defensa " style="font-size: calc(10px * var(--zoom-factor));">A-16 Ministerio de Defensa </option><option value="A-18 Actividad económica" style="font-size: calc(10px * var(--zoom-factor));">A-18 Actividad económica</option><option value="A-20 Mercancías perecederas" style="font-size: calc(10px * var(--zoom-factor));">A-20 Mercancías perecederas</option><option value="B-00 S. Particular Sin especificar " style="font-size: calc(10px * var(--zoom-factor));">B-00 S. Particular Sin especificar </option><option value="B-06 Agrícola" style="font-size: calc(10px * var(--zoom-factor));">B-06 Agrícola</option><option value="B-09 Obras" style="font-size: calc(10px * var(--zoom-factor));">B-09 Obras</option><option value="B-17 Vivienda" style="font-size: calc(10px * var(--zoom-factor));">B-17 Vivienda</option><option value="B-18 Actividad económica" style="font-size: calc(10px * var(--zoom-factor));">B-18 Actividad económica</option><option value="B-19 Recreativo" style="font-size: calc(10px * var(--zoom-factor));">B-19 Recreativo</option><option value="B-21 Vehículo de ferias" style="font-size: calc(10px * var(--zoom-factor));">B-21 Vehículo de ferias</option></select>
-                </td>
-                <td colspan="2">
-                    <span>Código CET (Código Elrctrónico de Transferencia):</span><br>
-                    <input type="text">
-                </td>
-                <td colspan="2">
-                    <span>Código CEMA (Código Elrctrónico de Maquinaria Agrícola):</span>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <th colspan="6">NUEVO DOMICILIO DEL VEHÍCULO (domicilio de empadronamiento del comprador del vehículo)</th>
-            </tr>
-            <tr>
-                <td>
-                    <span>Tipo de vía:</span><br>
-                    <input type="text" name="" id="">
-                </td>
-                <td colspan="4">
-                    <span>Nombre de la vía:</span><br>
-                    <input type="text">
-                </td>
-                <td>
-                    <span>Número:</span>
-                    <input type="text">
-                </td>
-            </tr>
-        </table>
+        <h1>DATOS DEL VEHÍCULO </h1>
     </div>
-    </form>
-</body>
+
+    <p>Matrícula: <input type="text" required=""></p>
+    <p>Fecha de matriculación (dd/mm/aaaa): <input type="date" required=""></p>
+    <p>Servicio al que se destina el vehículo: 
+        <select>
+            <option>A-00 Público sin especificar.</option>
+            <option>A-01 Alquiler SIN conductor.</option>
+            <option>A-02 Alquiler CON conductor.</option>
+            <option>etc</option>
+        </select>
+    </p>
+    <p>Código CET: <input type="text" maxlength="20"></p>
+    <p>Código CEMA: <input type="text" maxlength="12"></p>
+
+    <br>
+    <div>
+        <h1>NUEVO DOMICILIO DEL VEHÍCULO (domicili d'empadronament del comprador del vehicle)</h1>
+    </div>
+
+    <div>
+        <p>Tipos de via: <input type="text"></p>
+        <p>Nombre de la via: <input type="text"></p>
+        <p>Número: <input type="text"></p>
+    </div>
+    <div>
+        <p>Bloque: <input type="text"></p>
+        <p>Portal: <input type="text"></p>
+        <p>Escalera: <input type="text"></p>
+        <p>Planta: <input type="text"></p>
+    </div>
+    <div>
+        <p>Puerta: <input type="text"></p>
+        <p>KM: <input type="text"></p>
+        <p>Codigo postal: <input type="text"></p>
+        <p>Provincia: <select name="Província: ">
+            <option>Badajoz</option>
+            <option>Albacete</option>
+            <option>Cuenca</option>
+            <option>Teruel</option>
+        </select></p>
+        <p>Municipio: <select name="Municipi: ">
+            <option>Municipi1</option>
+            <option>Municipi2</option>
+        </select></p>
+
+        <p>Localidad: <input type="text"></p>
+    </div>
+
+    <br>
+    <div>
+        <h1>DATOS DEL COMPRADOR/ADQUIRENTE</h1>
+    </div>
+    <div>
+        <p>Persona interesada: <input type="radio" name="radio2"></p>
+
+    </div>
+
+    <div>
+        <p>Compraventa: <input type="radio" name="radio2"></p>
+    </div>
+
+    <p>NIF/NIE/CIF: <input type="text"></p>
+    <p>Fecha de nacimiento: <input type="date"></p>
+    <p>Nombre/Razón social: <input type="text"></p>
+    <p>Primer apellido: <input type="text"></p>
+    <p>Segundo apellido: <input type="text"></p>
+    <p>Codigo IAE: <input type="text"></p>
+    <p>Correo electrónico: <input type="text"></p>
+    <p>Teléfono: <input type="text"></p>
+    <p>Tutela: <input type="text"></p>
+    <div>
+        <p>Menor de edad: <input type="radio" name="radio3"></p>
+    </div>
+
+    <div>
+        <p>Otras causas: <input type="radio" name="radio3"></p>
+
+    </div>
+    <p>NIF/NIE del tutor: <input type="text"></p>
+
+
+
+    <br>
+    <div>
+        <h1>DATOS DEL VENDEDOR/TRANSMISOR</h1>
+    </div>
+    <div>
+        <p>Titular: <input type="radio" name="radio4"></p>
+
+        <p>Compraventa/Poseedor/Arrendatario: <input type="radio" name="radio4"></p>
+
+    </div>
+    <p> NIF/NIE/CIF: <input type="text"></p>
+    <p> Nombre/Razón social: <input type="text"></p>
+    <p> Primer apellido: <input type="text"></p>
+    <p> Segundo apellido: <input type="text"></p>
+
+    <br>
+    <div>
+        <h1>OTROS </h1>
+    </div>
+    <p> </p><input type="text">
+    <div>
+        <p>
+            Me opongo a que la Dirección General de Tránsito consulte electrónicamente mis datos personales referidos a:
+        </p>
+        <div>
+            <p>Empadronamiento: <input type="checkbox" name="Empadronament" checked></p>
+
+        </div>
+        <div>
+            <p>IAE: <input type="checkbox" name="IAE" checked></p>
+
+        </div>
+        <div>
+            <p>Identitdad<input type="checkbox" name="Identitat" checked></p>
+
+        </div>
+    </div>
+
 
 </html>
