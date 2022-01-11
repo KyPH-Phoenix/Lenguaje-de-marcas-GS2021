@@ -1,0 +1,95 @@
+/* Posicions: relatives o absolutes
+Altures:
+  body: tot l'espai de la finestra
+  header: 20%
+  main: 70 %
+  footer: 10%
+Amplaries:
+  Main o articles: 75%
+  aside: 25%
+  article: 45%;
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+}
+
+header {
+  background-color: #c4334b;
+  height: 20%;
+  position: relative;
+  text-align: center;
+  font-size: large;
+  color: white;
+  padding: 10px;
+}
+
+main {
+  /* position: relative; */
+  height: 70%;
+  width: 75%;
+  text-align: center;
+  background-color: gray;
+}
+
+main h1 {
+  background-color: goldenrod;
+}
+
+#articles {
+  position: absolute;
+  text-align: center;
+  background-color: white;
+  border: solid 1px black;
+  margin: 5% 12%;
+  width: 50%;
+  font-size: large;
+}
+
+article {
+  border: solid 1px black;
+  width: 45%;
+  margin: 3%;
+}
+
+#article2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#article4 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+aside {
+  top: 20%;
+  right: 0;
+  position: absolute;
+  width: 25%;
+  height: 70%;
+  background-color: rgb(204, 214, 188);
+  padding: 20px 10px;
+}
+
+aside ul {
+  margin-top: 10%;
+  margin-left: 5%;
+  list-style-type: none;
+}
+
+footer {
+  position: relative;
+  background-color: #c4334b;
+  color: white;
+  height: 10%;
+  font-size: large;
+}

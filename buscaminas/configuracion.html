@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configuración</title>
 </head>
+
 <body>
     <header>
         <a href="buscaminas.html"><img src="buscaminas-logo.webp" alt="Buscaminas Logo" width="50px"></a>
@@ -17,6 +19,32 @@
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </header>
-    
+    <main>
+        <h1>CONFIGURACION</h1>
+        <p>
+            Introduce los parámetros de tu partida:
+        </p>
+        <form action="GET">
+            <label for="horizontal">Número de casillas horizontales: </label>
+            <input type="number" id="horizontal">
+            <br>
+            <label for="vertical">Número de casillas verticales: </label>
+            <input type="number" id="vertical">
+            <br>
+            <label for="nMinas">Número de minas: </label>
+            <input type="number" id="minas">
+        </form>
+    </main>
+    <footer>
+        <br>
+        <p>
+            Hugo Notario Fructuoso - Lenguaje de Marcas
+        </p>
+        <p>
+            &copy;2021
+        </p>
+    </footer>
+
 </body>
+
 </html>
