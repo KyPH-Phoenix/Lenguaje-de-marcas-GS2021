@@ -1,0 +1,55 @@
+#cub div{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#cub {
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg);
+    position: relative;
+    margin: 400px;
+    animation-name: esliceu;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#davant {
+    background-color: blue;
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+#darrera {
+    background-color: red;
+    transform: rotateX(-90deg) translateZ(-100px);
+}
+
+#adalt {
+    background-color: green;
+    transform: translateZ(100px);
+}
+
+#abaix {
+    background-color: orange;
+    transform: translateZ(-100px);
+}
+
+#esquerra {
+    background-color: purple;
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+#dreta {
+    background-color: yellow;
+    transform: rotateY(-90deg) translateZ(-100px);
+}
+
+@keyframes esliceu {
+    16% { -ms-transform: rotateY(-90deg); transform: rotateY(-90deg); }
+    33% { -ms-transform: rotateY(-90deg) rotateZ(90deg); transform: rotateY(-90deg) rotateZ(90deg); }
+    50% { -ms-transform: rotateY(180deg) rotateZ(90deg); transform: rotateY(180deg) rotateZ(90deg); }
+    66% { -ms-transform: rotateY(90deg) rotateX(90deg); transform: rotateY(90deg) rotateX(90deg); }
+    83% { -ms-transform: rotateX(90deg); transform: rotateX(90deg); }
+}
