@@ -26,6 +26,11 @@
     transform: rotateX(-90deg) translateZ(-100px);
 }
 
+#gram {
+    background-color: black;
+    border: so;
+}
+
 #adalt {
     background-color: green;
     transform: translateZ(100px);
