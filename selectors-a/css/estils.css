@@ -1,0 +1,90 @@
+/* 1- Posar tots els span de color verd */
+span {
+    color: green;
+}
+
+/* 2- Amb un únic selector que totes les paraules "vermell" 
+surtin de color "vermell" */
+section:first-child h2, section:first-child p {
+    color: red;
+}
+
+/* 3- Amb un selector únic que totes les paraules "blau" surtin de color "blau" */
+section:nth-child(2) h2 {
+    color: blue;
+}
+
+/* 4. De la taula, posar les files parells de color de
+fons groc i les files imparells gris. */
+table tr:nth-child(odd) {
+    background-color: gray;
+}
+
+table tr:nth-child(even) {
+    background-color: yellow;
+}
+
+/* 5- La segona classe anomenada "segon" poseu-la en negreta */
+.segon:nth-child(2) {
+    font-weight: bold;
+}
+
+/* 6- La segona classe anomenada "segon" pinteu-la de color blau */
+.segon:nth-child(2) {
+    color: blue;
+}
+
+/* 6b- Feu que el requisit 1 es compleixi sí o sí */
+span {
+    color: green !important;
+}
+
+/* 7- tots els elements amb atribut "id" vull que estiguin 
+subrallats */
+*[id] {
+    text-decoration: underline;
+}
+
+/* 8- L'element amb l'ATRIBUT id "darrer" es posi en cursiva */
+#darrer {
+    font-style: italic;
+}
+
+/* 9- Texte 1: vermell, Texte 2: blau, Texte 3: taronja i no s'ha
+de modificar "Hola que tal?" */
+section>div {
+    color: red ;
+}
+
+section>div>div:nth-child(2) {
+    color: blue;
+}
+
+section>div>div:nth-child(2)>div {
+    color: orange;
+}
+
+section>div>div:nth-child(2)>div p {
+    color: initial;
+}
+
+/* 10- La primera columna de la taula ha d'anar en negreta */
+tr:first-child {
+    font-weight: bold;
+}
+
+/* 11- EXTRA: modifiqueu la nota d'en Manu per un 10. (ho heu 
+de cercar, no ho hem vist!)*/
+tr:nth-child(2) td:last-child {
+    display: none;
+}
+
+tr:nth-child(2):after {
+    content: '10';
+}
+
+
+
+
+
+
