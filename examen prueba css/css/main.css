@@ -1,5 +1,11 @@
 /* Exercici 1 - GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Piedra&family=Sriracha&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* Exercici 2 - LOGO */
 
@@ -17,3 +23,4 @@
 
 
 /* Exercici 3 - LAYOUT RESPONSIVE */
+
