@@ -86,8 +86,15 @@ header div nav ul li:hover > ul {
     display: block;
 }
 /* Exercici 5 - SIDEBAR */
+main aside {
+    background-color: rgb(121, 9, 9);
+    padding: 30px;
+}
 
-
+main aside section {
+    border: dashed 5px #7f8c8d;
+    margin-bottom: 20px;
+}
 /* Exercici 6 - CONTAINER */
 
 
