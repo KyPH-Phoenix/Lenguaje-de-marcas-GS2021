@@ -7,12 +7,84 @@
     box-sizing: border-box;
 }
 
-/* Exercici 2 - LOGO */
+body {
+    font-size: 12px;
+    background-color: #485460;
+    width: 100vw;
+    font-family: 'Sriracha';
+}
 
+/* Exercici 2 - LOGO */
+header div h1.col-12 {
+    font-family: 'Piedra';
+    color: #d50000;
+    text-shadow: 10px 20px 30px white;
+    text-align: right;
+    margin-right: 20px;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    font-size: 5em;
+    letter-spacing: 0.5em;
+}
+
+/* Exercici 3 - LAYOUT RESPONSIVE*/
+.row {
+    display: grid;
+}
+
+@media only screen and (min-width: 680px) {
+    .row {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+.col-12 {
+    grid-column: 1 / 13;
+}
+
+.col-8 {
+    width: 100vw;
+}
 
 /* Exercici 4 - MENÚ */
+header div nav ul{
+    position: relative;
+    color: white;
+    list-style: none;
+    display: flex;
 
+}
 
+header div nav ul:first-child {
+    background: radial-gradient(circle, white, rgb(121, 9, 9) 35%);
+    padding-left: 10px;
+}
+
+header div nav ul a {
+    font-size: 1.2em;
+    color: white;
+}
+
+header div nav ul li {
+    padding: 5px;
+}
+
+header div nav ul li:hover {
+    background-color: #ff5131;
+    cursor: pointer;
+}
+
+header div nav ul ul {
+    display: none;
+    position: absolute;
+    top: 28px;
+    background-color: rgb(121, 9, 9);
+}
+
+header div nav ul li:hover > ul {
+    display: block;
+}
 /* Exercici 5 - SIDEBAR */
 
 
@@ -20,7 +92,4 @@
 
 
 /* Exercici 7 - INFINITE DOG */
-
-
-/* Exercici 3 - LAYOUT RESPONSIVE */
 

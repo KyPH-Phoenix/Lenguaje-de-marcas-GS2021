@@ -14,6 +14,11 @@ font-family: 'Ubuntu', sans-serif;
     font-family: 'Ubuntu', sans-serif;
 }
 
+body {
+    min-height: 100%;
+    background-color: beige;
+}
+
 /***********
 ** Header **
 ************/
@@ -24,9 +29,9 @@ header {
     margin-bottom: 30px;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     flex-basis: 100%;
-    background-color: red;
+    background-color: rgb(255, 153, 0);
 }
 
 header ul {
@@ -46,13 +51,14 @@ header ul li {
 }
 
 header ul li:hover {
-    background-color: brown;
+    background-color: rgb(238, 131, 0);
 }
 
 header ul li a {
     text-decoration: none;
     color: black;
     font-size: large;
+    font-weight: bolder;
 }
 
 header .logo {
@@ -65,8 +71,102 @@ header .logo {
 
 main {
     padding: 0 50px 0 50px;
+    padding-bottom: 108px;
 }
 
+main h1 {
+    margin: 20px 0 20px 0;
+    font-size: xxx-large;
+}
+
+main p {
+    font-size: large;
+    margin: 20px 0 20px 0;
+    text-align: justify;
+}
+
+main iframe {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.historia .content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.historia .content .biografia{
+    flex-basis: 70%;
+}
+
+.historia .content img {
+    max-height: 20vw;
+    margin-left: 40px;
+    margin-top: 20px;
+    flex-basis: 30%;
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vw;
+
+}
+
+.redes img {
+    height: 7vw;
+}
+
+canvas {
+    background-image: url(https://ep01.epimg.net/tecnologia/imagenes/2018/02/13/actualidad/1518525589_925555_1518526201_noticia_normal.jpg);
+    width: 1000px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between; 
+}
+
+form span {
+    flex-basis: 33%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+}
+
+form label {
+    margin-right: 10px;
+}
+
+form input {
+    padding: 10px 5px;
+    margin: 10px 0px;
+}
+
+/***********
+** Footer **
+************/
+
+
+
 footer {
-    padding: 0 50px 0 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+    padding: 40px 50px 30px 50px;
+    height: 80px;
+    background-color: rgb(45, 45, 45);
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
 }
