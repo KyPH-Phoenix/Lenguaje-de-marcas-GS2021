@@ -10,7 +10,7 @@
 body {
     font-size: 12px;
     background-color: #485460;
-    width: 100vw;
+    width: 100%;
     font-family: 'Sriracha';
 }
 
@@ -28,23 +28,35 @@ header div h1.col-12 {
 }
 
 /* Exercici 3 - LAYOUT RESPONSIVE*/
-.row {
-    display: grid;
+
+@media only screen and (max-width: 679px) {
+    .col-1 {float: left; width: 100%;}
+    .col-2 {float: left; width: 100%;}
+    .col-3 {float: left; width: 100%;}
+    .col-4 {float: left; width: 100%;}
+    .col-5 {float: left; width: 100%;}
+    .col-6 {float: left; width: 100%;}
+    .col-7 {float: left; width: 100%;}
+    .col-8 {float: left; width: 100%;}
+    .col-9 {float: left; width: 100%;}
+    .col-10 {float: left; width: 100%;}
+    .col-11 {float: left; width: 100%;}
+    .col-12 {float: left; width: 100%;}
 }
 
 @media only screen and (min-width: 680px) {
-    .row {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-.col-12 {
-    grid-column: 1 / 13;
-}
-
-.col-8 {
-    width: 100vw;
+    .col-1 {float: left; width: 8.33%;}
+    .col-2 {float: left; width: 16.66%;}
+    .col-3 {float: left; width: 25%;}
+    .col-4 {float: left; width: 33.33%;}
+    .col-5 {float: left; width: 41.66%;}
+    .col-6 {float: left; width: 50%;}
+    .col-7 {float: left; width: 58.33%;}
+    .col-8 {float: left; width: 66.66%;}
+    .col-9 {float: left; width: 75%;}
+    .col-10 {float: left; width: 83.33%;}
+    .col-11 {float: left; width: 91.66%;}
+    .col-12 {float: left; width: 100%;}
 }
 
 /* Exercici 4 - MENÚ */
@@ -95,8 +107,41 @@ main aside section {
     border: dashed 5px #7f8c8d;
     margin-bottom: 20px;
 }
-/* Exercici 6 - CONTAINER */
 
+#container>div:first-child {
+    padding: 30px;
+    background-color: rgb(121, 9, 9);
+    display: grid;
+    grid-template-areas: 
+    "a b c"
+    "a d d";
+    height: 500px;
+}
+
+#container>div:first-child>.a {
+    background-image: url(./../img/gallery/ca2.jpg);
+    grid-area: a;
+}
+
+#container>div:first-child>.b {
+    background-image: url(./../img/gallery/ca3.jpg);
+    grid-area: b;
+}
+
+#container>div:first-child>.c {
+    background-image: url(./../img/gallery/ca4.jpg);
+    grid-area: c;
+}
+
+#container>div:first-child>.d {
+    background-image: url(./../img/gallery/ca5.jpg);
+    grid-area: d;
+}
+
+/* Exercici 6 - CONTAINER */
+@keyframes anim1 {
+    100% {transform: rotateY(360deg)}
+}
 
 /* Exercici 7 - INFINITE DOG */
 
