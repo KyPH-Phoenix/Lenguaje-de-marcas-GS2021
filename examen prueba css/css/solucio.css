@@ -1,0 +1,427 @@
+/* Exercici 1 - GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Piedra&family=Sriracha&display=swap');
+
+*{
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/*     
+
+    font-family: 'Piedra', cursive;
+
+    font-family: 'Sriracha', cursive;
+
+    */
+
+
+body {
+
+    width:100%;
+
+    font-size: 12px;
+
+    background-color:#485460;
+
+    font-family: 'Sriracha', cursive;
+
+}
+
+
+
+/* Exercici 2 - LOGO */
+
+
+header div h1 {
+
+    font-family: Piedra;
+
+    color: #d50000;
+
+    text-shadow: 10px 20px 30px white;
+
+    text-align: right;
+
+    margin-right: 20px;
+
+    text-decoration: line-through;
+
+    text-transform: uppercase;
+
+    font-size: 5em;
+
+    letter-spacing: 0.5em;
+
+}
+
+
+/* Exercici 3 - LAYOUT RESPONSIVE */
+
+
+@media (min-width: 680px) {
+
+    .col-1 {float: left; width: 8.33%;}
+
+    .col-2 {float: left; width: 16.66%;}
+
+    .col-3 {float: left; width: 25%;}
+
+    .col-4 {float: left; width: 33.33%;}
+
+    .col-4 {float: left; width: 41.66%;}
+
+    .col-6 {float: left; width: 50%;}
+
+    .col-7 {float: left; width: 58.33%;}
+
+    .col-8 {float: left; width: 66.66%;}
+
+    .col-9 {float: left; width: 75%;}
+
+    .col-10 {float: left; width: 83.33%;}
+
+    .col-11 {float: left; width: 91.66%;}
+
+    .col-12 {float: left; width: 100%;}
+
+ }
+
+
+@media (max-width: 679px) {   
+
+    .col-1 {float: left; width: 100%;}
+
+    .col-2 {float: left; width: 100%;}
+
+    .col-3 {float: left; width: 100%;}
+
+    .col-4 {float: left; width: 100%;}
+
+    .col-4 {float: left; width: 100%;}
+
+    .col-6 {float: left; width: 100%;}
+
+    .col-7 {float: left; width: 100%;}
+
+    .col-8 {float: left; width: 100%;}
+
+    .col-9 {float: left; width: 100%;}
+
+    .col-10 {float: left; width: 100%;}
+
+    .col-11 {float: left; width: 100%;}
+
+    .col-12 {float: left; width: 100%;}
+
+}
+
+
+.row { clear:both;}
+
+
+/* Exercici 4 - MENÚ */
+
+div nav {
+
+    /* background-color:rgb(121, 9, 9); */
+
+    background: radial-gradient(circle,white 0%, rgb(121, 9, 9) 35% );
+
+    padding-left: 10px;
+
+    display:flex;
+
+    flex-direction: row;
+
+    width: 100% !important;  /* no quadra amb l'enunciat */
+
+}
+
+
+nav ul{
+
+    display:flex;
+
+    flex-direction: row;
+
+} 
+
+nav ul li {
+
+    margin: 5px 5px 5px 5px;
+
+    position: relative;
+
+    color: white;
+
+    list-style: none;
+
+}
+
+
+ul li a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 1.2em;   
+
+}
+
+
+nav ul li:hover {
+
+    background-color: #ff5131;
+
+    cursor: pointer;
+
+}
+
+
+nav ul li ul {
+
+    display: none;
+
+}
+
+
+    nav ul li:hover ul {
+
+    display: flex;
+
+    flex-direction: column;
+
+    position: absolute;
+
+    background-color: rgb(121, 9, 9);
+
+    top: 28px; 
+
+}
+
+
+
+/* Exercici 5 - SIDEBAR */
+
+
+
+
+/* Aqui no me quadra amb l'enunciat. No hi ha imatges de background sino iframes */
+
+/* 
+
+main div aside {
+
+    background-color: rgb(121, 9, 9);
+
+    padding: 30px;
+
+    display: grid;
+
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-columns: 1fr;
+
+}
+
+
+main div aside section {
+
+    border: 5px dashed #7f8c8d;
+
+    padding: 20px;
+
+}
+
+
+iframe {
+
+    width: fit-content;
+
+}
+
+
+main div aside section:first-child {
+
+    grid-row: 1/2;
+
+}
+
+main div aside section:last-child {
+
+    grid-row: 2/3;
+
+} */
+
+
+main div aside {
+
+    display: none;
+
+}
+
+
+#container>div:first-child {
+
+    background-color: rgb(121, 9, 9);
+
+    border: 5px dashed #7f8c8d;
+
+    padding: 30px;
+
+    height: 200px;
+
+    display: grid;
+
+    /* background-size: cover; */
+
+    grid-template-areas: 
+
+    "a b c"
+
+    "a d d";
+
+
+}
+
+
+#container>div>div.a {
+
+    background-image: url("../img/gallery/ca1.jpg");
+
+    grid-area: a;
+
+}
+
+#container>div>div.b {
+
+    background-image: url("../img/gallery/ca2.jpg");
+
+    grid-area: b;
+
+}
+
+#container>div>div.c {
+
+    background-image: url("../img/gallery/ca3.jpg");
+
+    grid-area: c;
+
+}
+
+#container>div>div.d {
+
+    background-image: url("../img/gallery/ca4.jpg");
+
+    grid-area: d;
+
+}
+
+
+/* Falta afegir la secció de quatre imatges que no queda clara a l'enunciat */
+
+
+/* Exercici 6 - CONTAINER */
+
+
+#gallery {
+
+    background-color: #9b0000;
+
+    padding: 20px 40px;
+
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap:wrap;
+
+}
+
+
+#gallery article {
+
+    width: 50%;
+
+    /* height:30vh; */
+
+    filter: grayscale(100%); 
+
+    animation-name: anim1;
+
+    animation-duration: 5s;
+
+    animation-iteration-count: 3;
+
+}
+
+
+#gallery article h3 {
+
+    display: none;
+
+}
+
+#gallery article img {
+
+    object-fit: cover;
+
+    height: 90%;
+
+    width: 100%
+
+}
+
+
+@keyframes anim1{
+
+    /* 0% { transform: rotateY(0deg); } */
+
+    100% { transform: rotateY(360deg); }
+
+}
+
+
+/* Exercici 7 - INFINITE DOG */
+
+
+#animation {
+
+    height: 400px;
+
+    background-image: url("../img/animation/long-dachshund-dog-cartoon-vector-1116614.jpg");
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+
+}
+
+
+#animation:hover {
+
+    animation-name: anim2;
+
+    animation-duration: 5s;
+
+    animation-iteration-count: 1;
+
+
+}
+
+
+@keyframes anim2{
+
+    /* 0% { transform: rotateY(0deg); } */
+
+    100% { transform: rotateY(360deg); }
+
+}

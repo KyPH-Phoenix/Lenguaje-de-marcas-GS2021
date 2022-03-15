@@ -139,9 +139,46 @@ main aside section {
 }
 
 /* Exercici 6 - CONTAINER */
+#gallery {
+    background-color: #9b0000;
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#gallery article {
+    width: 50%;
+    animation-name: anim1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    filter: grayscale(100%); 
+}
+
+#gallery article h3 {
+    display: none;
+}   
+
+#gallery article img {
+    object-fit: cover;
+    height: 90%;
+    width: 100%
+}
+
 @keyframes anim1 {
     100% {transform: rotateY(360deg)}
 }
 
 /* Exercici 7 - INFINITE DOG */
 
+#animation {
+    background-image: url(./../img/animation/long-dachshund-dog-cartoon-vector-1116614.jpg);
+    height: 500px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#animation:hover {
+    animation-name: anim1;
+    animation-duration: 5s;
+}
