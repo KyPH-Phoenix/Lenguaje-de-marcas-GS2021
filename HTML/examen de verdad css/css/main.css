@@ -1,0 +1,314 @@
+/* Exercici 1 - GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nanum+Gothic&display=swap');
+/*     
+font-family: 'Lobster', cursive;
+font-family: 'Nanum Gothic', sans-serif; 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 12px;
+    background-color: #ece4df;
+    font-family: 'Nanum Gothic', sans-serif; 
+    width: 100%;
+}
+
+/* Exercici 2 - LOGO */
+.capsalera {
+    background-color: #bbb9b8;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.capsalera h1 {
+    font-family: 'Lobster', cursive;
+    color: #7c3407;
+    text-shadow: 0px 0px 20px rgb(124, 52, 52);
+    text-align: right;
+    text-decoration: underline 2pt;
+    font-weight: bold;
+    font-size: 4em;
+    letter-spacing: 0.25em;
+}
+
+/* Exercici 3 - LAYOUT RESPONSIVE */
+@media only screen and (max-width: 679px) {
+    .col-1 {float: left; width: 100%;}
+    .col-2 {float: left; width: 100%;}
+    .col-3 {float: left; width: 100%;}
+    .col-4 {float: left; width: 100%;}
+    .col-5 {float: left; width: 100%;}
+    .col-6 {float: left; width: 100%;}
+    .col-7 {float: left; width: 100%;}
+    .col-8 {float: left; width: 100%;}
+    .col-9 {float: left; width: 100%;}
+    .col-10 {float: left; width: 100%;}
+    .col-11 {float: left; width: 100%;}
+    .col-12 {float: left; width: 100%;}
+}
+
+@media only screen and (min-width: 680px) {
+    .col-1 {float: left; width: 8.33%;}
+    .col-2 {float: left; width: 16.66%;}
+    .col-3 {float: left; width: 25%;}
+    .col-4 {float: left; width: 33.33%;}
+    .col-5 {float: left; width: 41.66%;}
+    .col-6 {float: left; width: 50%;}
+    .col-7 {float: left; width: 58.33%;}
+    .col-8 {float: left; width: 66.66%;}
+    .col-9 {float: left; width: 75%;}
+    .col-10 {float: left; width: 83.33%;}
+    .col-11 {float: left; width: 91.66%;}
+    .col-12 {float: left; width: 100%;}
+}
+
+.row {
+    clear: both;
+}
+
+/* Exercici 4 - MENÚ i FOOTER*/
+header nav {
+    background-color: rgb(141, 25, 25);
+    padding-left: 10px;
+    color: white;
+    font-size: 1.5em;
+}
+
+header nav ul{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+header nav>ul>li {
+    margin: 5px;
+}
+
+header nav li {
+    list-style-type: none;
+    background-color: rgb(141, 25, 25);
+
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul li:hover {
+    background-color: #5c3413;
+    cursor: pointer;
+}
+
+header nav ul>li>ul {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+}
+
+header nav li:hover>ul {
+    display: block;
+}
+
+footer {
+    background-color: rgb(141, 25, 25);
+    padding-left: 10px;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+footer ul {
+    margin: 5px;
+}
+
+footer section {
+    width: 25%;
+}
+/* Exercici 5 - SIDEBAR */
+aside {
+    background-color: rgb(216,158,158);
+    display: flex;
+    flex-direction: column;
+}
+
+aside section {
+    border: dashed gray 2px;
+    padding: 20px;
+}
+
+#noticies-destacades ul {
+    font-size: 1.5em;
+}
+
+aside section img {
+object-fit: cover;
+}
+
+@media only screen and (min-width: 1213px) 
+{
+    #projectes {
+        display: grid;
+        grid-template-areas:
+        "title title" 
+        "a b"
+        "c d";
+    }
+}
+
+@media only screen and (max-width: 1212px) {
+    #projectes {
+        display: grid;
+        grid-template-areas:
+        "title" 
+        "a" 
+        "b"
+        "c" 
+        "d";
+    }
+}
+
+#projectes img {
+    height: 150px;
+    width: 150px;
+}
+
+#projectes h2 {
+    grid-area: title;
+}
+
+#projectes img:nth-child(1) {
+    grid-area: a;
+}
+
+#projectes img:nth-child(2) {
+    grid-area: b;
+}
+
+#projectes img:nth-child(3) {
+    grid-area: c;
+}
+
+#projectes img:nth-child(4) {
+    grid-area: d;
+}
+
+#tools img {
+    width: 100%;
+    /* height: 100%; */
+}
+
+aside h2 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+aside li {
+    list-style-type: none;
+}
+
+aside li a {
+    text-decoration: none;
+}
+
+/* Exercici 6 - MAIN */
+#darreres-noticies {
+    display: grid;
+    grid-template-areas: 
+    "title title"
+    "a1 a2"
+    "a3 a4"
+    "a5 a6"
+    "a7 a8";
+}
+
+#darreres-noticies h2 {
+    text-align: center;
+    grid-area: title;
+}
+
+#darreres-noticies img {
+    object-fit: cover;
+    height: 90%;
+    width: 100%;
+}
+
+.a1 {
+    grid-area: a1;
+}
+
+.a2 {
+    grid-area: a2;
+}
+
+.a3 {
+    grid-area: a3;
+}
+
+.a4 {
+    grid-area: a4;
+}
+
+.a5 {
+    grid-area: a5;
+}
+
+.a6 {
+    grid-area: a6;
+}
+
+.a7 {
+    grid-area: a7;
+}
+
+.a8 {
+    grid-area: a8;
+}
+
+#darreres-noticies article {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border: solid #220c03 3px;
+    border-radius: 4px;
+}
+
+#darreres-noticies article h3 {
+    text-align: left;
+}
+
+/* Exercici 7 - ANIMACIONS */
+
+#tools img:hover {
+    animation-name: anim1;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+#logo:hover {
+    animation-name: anim2;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes anim1 {
+    100% {transform: rotateY(360deg)}
+}
+
+@keyframes anim2 {
+    50% {transform: rotateZ(360deg);}
+    50% {transform: rotateZ(-360deg);}
+
+}
