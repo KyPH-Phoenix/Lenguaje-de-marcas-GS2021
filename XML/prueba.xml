@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <language>es-es</language>
+
+    <channel>
+        <title>Noticias LOL</title>
+        <link>#</link>
+        <description>Noticias de League of Legends al día.</description>
+        <item>
+            <category>Balance</category>
+            <title>Nerfeen Katarina</title>
+            <link>#</link>
+            <description>Katarina esta rota nerfeenla</description>
+        </item>
+        <item>
+            <category>Balance</category>
+            <title>Buffen a los tanks</title>
+            <link>#</link>
+            <description>Los tanks tan flojos buffenlos</description>
+            <image>
+                <url>./../img/Captura de pantalla de 2022-04-04 18-30-50.png</url>
+                <title>Wide Katarina</title>
+                <description></description>
+            </image>
+        </item>
+    </channel>
+</rss>
