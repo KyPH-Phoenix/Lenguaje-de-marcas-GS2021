@@ -1,0 +1,27 @@
+<html>
+
+<body>
+
+    <svg width="1000" height="1000">
+
+        <rect x="200" y="40" width="500" height="360"  fill="yellow" stroke="black" stroke-width="10"/>
+        <rect x="200" y="400" width="500" height="150"  fill="#4b3118" stroke="black" stroke-width="10"/>
+        <rect x="200" y="400" width="500" height="75"  fill="white" stroke="black" stroke-width="10"/>
+        
+        <polygon points="410,405 490,405 450,420" fill="red"/>
+        <polygon points="430,445 470,445 450,420" fill="red"/>
+        <polygon points="430,445 470,445 450,470" fill="red"/>
+
+        
+        <circle cx="350" cy="150" fill="white" r="50"/>
+        <circle cx="350" cy="150" fill="black" r="25"/>
+
+        <circle cx="550" cy="150" fill="white" r="50"/>
+        <circle cx="550" cy="150" fill="black" r="25"/>
+
+        
+    </svg>
+
+</body>
+
+</html>

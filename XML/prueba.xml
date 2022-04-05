@@ -6,12 +6,14 @@
         <title>Noticias LOL</title>
         <link>#</link>
         <description>Noticias de League of Legends al día.</description>
+
         <item>
             <category>Balance</category>
             <title>Nerfeen Katarina</title>
             <link>#</link>
             <description>Katarina esta rota nerfeenla</description>
         </item>
+
         <item>
             <category>Balance</category>
             <title>Buffen a los tanks</title>
@@ -22,6 +24,29 @@
                 <title>Wide Katarina</title>
                 <description></description>
             </image>
+        </item>
+
+        <item>
+            <category>Divulgación</category>
+            <title>Cuando el lol molaba</title>
+            <link>#</link>
+            <description>Es broma jajajaja</description>
+            <enclosure url="#" length="5000" type="audio/mpeg" />
+        </item>
+
+        <item>
+            <category>Guias</category>
+            <title>Guia para ser manco en el lol</title>
+            <link>#</link>
+            <description>Es broma jajajaja ya eres manco</description>
+            <enclosure url="#" length="5000" type="video/wvm" />
+        </item>
+
+        <item>
+            <category>Divulgación</category>
+            <title>Articulo metido con calzador</title>
+            <link>#</link>
+            <description>Articulo para basicamente llegar a los 5 articulos.</description>
         </item>
     </channel>
 </rss>
