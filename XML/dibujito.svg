@@ -3,23 +3,186 @@
 <body>
 
     <svg width="1000" height="1000">
-
-        <rect x="200" y="40" width="500" height="360"  fill="yellow" stroke="black" stroke-width="10"/>
-        <rect x="200" y="400" width="500" height="150"  fill="#4b3118" stroke="black" stroke-width="10"/>
-        <rect x="200" y="400" width="500" height="75"  fill="white" stroke="black" stroke-width="10"/>
         
-        <polygon points="410,405 490,405 450,420" fill="red"/>
-        <polygon points="430,445 470,445 450,420" fill="red"/>
-        <polygon points="430,445 470,445 450,470" fill="red"/>
+        <rect width="1000" height="1000" fill="white"/>
+        <rect 
+            x="200" 
+            y="40" 
+            width="500" 
+            height="360"  
+            fill="yellow" 
+            stroke="black" 
+            stroke-width="10"
+        />
+    
+        <rect 
+            x="200" 
+            y="400" 
+            width="500" 
+            height="150"  
+            fill="#4b3118" 
+            stroke="black" 
+            stroke-width="10"
+        />
+        
+        <rect width="90" height="20" x="230" y="490" />
+        <rect width="90" height="20" x="350" y="490" />
+        <rect width="90" height="20" x="470" y="490" />
+        <rect width="90" height="20" x="590" y="490" />
+
+        <rect 
+            x="200" 
+            y="400" 
+            width="500" 
+            height="75"  
+            fill="white" 
+            stroke="black" 
+            stroke-width="10"
+        />
+        
+        <polygon 
+            points="410,405 490,405 450,420" 
+            fill="red"
+        />
+
+        <polygon 
+            points="430,445 470,445 450,420" 
+            fill="red"
+        />
+
+        <polygon 
+            points="430,445 470,445 450,470" 
+            fill="red"
+        />
 
         
-        <circle cx="350" cy="150" fill="white" r="50"/>
-        <circle cx="350" cy="150" fill="black" r="25"/>
-
-        <circle cx="550" cy="150" fill="white" r="50"/>
-        <circle cx="550" cy="150" fill="black" r="25"/>
-
+        <circle 
+            cx="350"
+            cy="150" 
+            fill="white" 
+            r="50"
+            stroke="black"            
+        />
         
+        <circle 
+            cx="350" 
+            cy="150" 
+            fill="#5691ff" 
+            r="25"
+        />
+        <circle 
+            cx="350" 
+            cy="150" 
+            fill="black" 
+            r="15"
+        />
+
+        <circle 
+            cx="550" 
+            cy="150" 
+            fill="white" 
+            r="50"
+            stroke="black"
+        />
+        
+        <circle 
+            cx="550" 
+            cy="150" 
+            fill="#5691ff" 
+            r="25"
+        />
+        <circle 
+            cx="550" 
+            cy="150" 
+            fill="black" 
+            r="15"
+        />
+
+        <line 
+            x1="310" 
+            x2="320" 
+            y1="90" 
+            y2="110" 
+            stroke="black"
+        />
+
+        <line 
+            x1="380" 
+            x2="390" 
+            y1="110" 
+            y2="90" 
+            stroke="black"
+        />
+
+        <line 
+            x1="350" 
+            x2="350" 
+            y1="80" 
+            y2="100" 
+            stroke="black"
+        />
+
+        <line 
+            x1="510" 
+            x2="520" 
+            y1="90" 
+            y2="110" 
+            stroke="black"
+        />
+
+        <line 
+            x1="580" 
+            x2="590" 
+            y1="110" 
+            y2="90" 
+            stroke="black"
+        />
+
+        <line 
+            x1="550" 
+            x2="550" 
+            y1="80" 
+            y2="100" 
+            stroke="black"
+        />
+
+        <ellipse 
+            cx="520" 
+            cy="230" 
+            rx="100" 
+            ry="20" 
+            fill="yellow" 
+            stroke="black"
+        />
+
+        <line 
+            x1="350" 
+            x2="550" 
+            y1="300" 
+            y2="300" 
+            stroke-width="4" 
+            stroke="black"
+        />
+
+        <rect 
+            x="390" 
+            y="301" 
+            width="40" 
+            height="50" 
+            stroke="black" 
+            stroke-width="4" 
+            fill="white" 
+        />
+
+        <rect 
+            x="470" 
+            y="301" 
+            width="40" 
+            height="50" 
+            stroke="black" 
+            stroke-width="4" 
+            fill="white" 
+        />
     </svg>
 
 </body>

@@ -1,0 +1,9 @@
+a. //item[category[text()="Marc Márquez"]]
+
+b. //item[media:thumbnail[@width="150"]]
+
+c. //item[count(./category) > 4]
+
+d. //item[last() - 1] | //item[2]
+
+e. //*[@type="html"]
