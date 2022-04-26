@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Introduccion de IP random</h1>
+
+    <button type="button" onclick="test()">Botonaco</button>
+
+    <input type="text" id="ip">
+    <input type="text" id="mascara">
+
+    <p id="salida"><br><br></p>
+
+    <script>
+        function test() {
+            let ip = document.getElementById("ip").value;
+            let mascara = document.getElementById("mascara").value;
+            let salida = "La ip es:<br>";
+            iparray = ip.split(".");
+            maskarray = mascara.split(".")
+
+            for (let i = 0; i < 4; i++) {
+                salida += "El " + (i + 1) + "º byte es: " + iparray[i] + "<br>";
+            }
+
+            salida += "<br>La máscara es:<br>"
+
+            for (let i = 0; i < 4; i++) {
+                salida += "El " + (i + 1) + "º byte es: " + maskarray[i] + "<br>";
+            }
+            
+            let netid
+
+            document.getElementById("salida").innerHTML = salida;
+        }
+    </script>
+
+</body>
+</html>
