@@ -11,34 +11,69 @@
 
     <button type="button" onclick="test()">Botonaco</button>
 
-    <input type="text" id="ip">
-    <input type="text" id="mascara">
+    <input type="text" id="ip" placeholder="IP">
+    <input type="text" id="mascara" placeholder="Mask">
+    <input type="text" id="subredes" placeholder="N. Subxarxes">
 
     <p id="salida"><br><br></p>
+    <p id="broadcast"><br><br></p>
+    <p id="subnet"></p>
+
 
     <script>
         function test() {
             let ip = document.getElementById("ip").value;
             let mascara = document.getElementById("mascara").value;
-            let salida = "La ip es:<br>";
             iparray = ip.split(".");
             maskarray = mascara.split(".")
 
-            for (let i = 0; i < 4; i++) {
-                salida += "El " + (i + 1) + "º byte es: " + iparray[i] + "<br>";
-            }
+            let netip = getNetIp(maskarray, iparray);
+            document.getElementById("salida").innerHTML = "La ip de xarxa es: " + netip;
 
-            salida += "<br>La máscara es:<br>"
-
-            for (let i = 0; i < 4; i++) {
-                salida += "El " + (i + 1) + "º byte es: " + maskarray[i] + "<br>";
-            }
+            document.getElementById("broadcast").innerHTML = "La ip de broadcast es: " + getBroadcastIp(maskarray, netip);
             
-            let netid
+            document.getElementById("subnet").innerHTML = subneting(netip, maskarray);
+        }
 
-            document.getElementById("salida").innerHTML = salida;
+        
+        
+        function getNetIp(maskarray, iparray) {
+            let netip = "";
+
+            for (let i = 0; i <     4; i++) {
+                netip += maskarray[i] & iparray[i]
+
+                if (i < 3) netip += ".";
+            }
+
+            return netip;
+        }
+
+        function getBroadcastIp(maskarray, netip) {
+            broadcastarray = netip.split(".")
+            let broadcast = ""; 
+
+            for (let i = 0; i < 4; i++) {
+                maskarray[i] = ~maskarray[i];
+                maskarray[i] = ((maskarray[i] << 1) >>> 1) & 255;
+                broadcast += maskarray[i] | broadcastarray[i]
+                
+                if (i < 3) broadcast += ".";
+            }
+
+            return broadcast;
+        }
+
+        function subneting(netip, maskarray) {
+            let nSubNets = document.getElementById("subredes").value;
+            if (nSubNets == 0) return "";
+            let bits = Math.ceil(Math.log2(nSubNets));
+
+            console.log(bits)
+
+            return bits;
         }
     </script>
-
+    
 </body>
 </html>
