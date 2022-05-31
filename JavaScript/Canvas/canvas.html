@@ -5,18 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <canvas id="canvas" width="200" height="200"></canvas>
+    
+    <img src="https://www.reviversoft.com/blog/wp-content/uploads/2013/03/Minesweeper_Icon.png" alt="mina" id="mina" height="40">
+    <br>    
+    <canvas id="canvas" width="400" height="400"></canvas>
+
 
     <script>
         var canvas = document.getElementById("canvas");
         var ctx = canvas.getContext("2d");
 
         ctx.moveTo(0, 0);
-        ctx.lineTo(200, 100);
-        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.lineTo(0, 400);
+        ctx.lineTo(400, 400);
+        ctx.lineTo(400, 0);
+        ctx.lineTo(0, 0);
+        ctx .stroke();
+        
+        for (let i = 0; i < 9; i++) {
+            let drawDistance = i * 40 + 40;
+            ctx.moveTo(drawDistance, 0);
+            ctx.lineTo(drawDistance, 400);
+            ctx.moveTo(0, drawDistance);
+            ctx.lineTo(400, drawDistance);
+
+            ctx.stroke();
+        }
+
+        var mina = document.getElementById("mina");
+        ctx.drawImage(mina, 0, 0, 40, 40);
+        ctx.drawImage(mina, 80, 160, 40, 40);
+        ctx.drawImage(mina, 240, 360, 40, 40);
+        ctx.drawImage(mina, 200, 280, 40, 40);
+        ctx.drawImage(mina, 120, 40, 40, 40);
+
         ctx.stroke();
+        
+
     </script>
 </body>
 </html>

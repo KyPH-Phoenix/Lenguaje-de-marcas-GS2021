@@ -38,9 +38,25 @@
                 <label for="nMinas">Número de minas: </label>
                 <input type="number" id="minas">
             </span>
-
+            <button type="button" onclick="get()">Guardar</button>
 
         </form>
+
+        <p id="cosas"></p>
+
+        <script>
+            function get() {
+                let vertical = document.getElementById("vertical").value;
+                let horizontal = document.getElementById("horizontal").value;
+
+                if (vertical > 12) vertical = 12;
+                if (horizontal > 31) horizontal = 31;
+
+                localStorage.setItem("vertical", vertical);
+                localStorage.setItem("horizontal", horizontal);
+            }
+        </script>
+
     </main>
     <footer>
         <p>

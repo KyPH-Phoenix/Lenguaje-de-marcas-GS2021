@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <a href="./buscaminas.html"><img src="./img/buscaminas-logo.webp" alt="Buscaminas Logo" width="50px"></a>
+        <a href="./buscaminas.html"><img src="./img/buscaminas-logo.webp" alt="Buscaminas Logo" width="50px" id="mina"></a>
         <ul>
             <li><a href="buscaminas.html">Juego</a></li>
             <li><a href="configuracion.html">Configuración</a></li>
@@ -22,7 +22,7 @@
     </header>
     <main>
         <h1>BUSCAMINAS</h1>
-        <canvas id="buscaminas"></canvas>
+        <canvas id="buscaminas" width="4000" height="4000"></canvas>
     </main>
     <footer>
         <p>
@@ -33,6 +33,46 @@
         </p>
     </footer>
 
+    <script>
+        var canvas = document.getElementById("buscaminas");
+        var ctx = canvas.getContext("2d");
+
+        let horizontal = localStorage.getItem("horizontal");
+        let vertical = localStorage.getItem("vertical");
+
+        ctx.moveTo(0, 0);
+        ctx.lineTo(0, vertical * 40); 
+        ctx.lineTo(horizontal * 40, vertical * 40);
+        ctx.lineTo(horizontal * 40, 0);
+        ctx.lineTo(0, 0);
+        
+        for (let i = 0; i < horizontal - 1; i++) {
+            let drawDistance = i * 40 + 40;
+            ctx.moveTo(drawDistance, 0);
+            ctx.lineTo(drawDistance, vertical * 40);
+        }
+
+        for (let i = 0; i < vertical - 1; i++) {
+            let drawDistance = i * 40 + 40;
+            ctx.moveTo(0, drawDistance);
+            ctx.lineTo(horizontal * 40, drawDistance);
+        }
+
+        var mina = document.getElementById("mina");
+        ctx.drawImage(mina, 0, 0, 40, 40);
+        ctx.drawImage(mina, 80, 160, 40, 40);
+        ctx.drawImage(mina, 240, 360, 40, 40);
+        ctx.drawImage(mina, 200, 280, 40, 40);
+        ctx.drawImage(mina, 120, 40, 40, 40);
+        ctx.drawImage(mina, 80, 360, 40, 40);
+        ctx.drawImage(mina, 160, 120, 40, 40);
+        ctx.drawImage(mina, 280, 120, 40, 40);
+
+        ctx.stroke();
+        ctx.stroke();
+        ctx.stroke();
+    </script>
+    
 </body>
 
 </html>

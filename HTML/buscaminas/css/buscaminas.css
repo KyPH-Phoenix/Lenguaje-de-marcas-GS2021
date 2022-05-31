@@ -121,11 +121,6 @@ main iframe {
     height: 7vw;
 }
 
-canvas {
-    background-image: url(https://ep01.epimg.net/tecnologia/imagenes/2018/02/13/actualidad/1518525589_925555_1518526201_noticia_normal.jpg);
-    width: 1000px;
-}
-
 form {
     display: flex;
     flex-direction: row;
@@ -157,7 +152,6 @@ form input {
 
 
 footer {
-    position: absolute;
     bottom: 0;
     width: 100%;
     margin-top: 30px;
