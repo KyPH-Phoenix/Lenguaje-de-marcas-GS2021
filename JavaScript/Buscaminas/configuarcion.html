@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="canvas.html">JUEGO</a>
+
+    <h1>CONFIGURACION</h1>
+    <p>
+        Introduce los parámetros de tu partida:
+    </p>
+    <form action="GET">
+        <span>
+            <label for="horizontal">Número de casillas horizontales: </label>
+            <input type="number" id="horizontal">
+        </span>
+        <span>
+            <label for="vertical">Número de casillas verticales: </label>
+            <input type="number" id="vertical">
+        </span>
+        <span>
+            <label for="minas">Número de minas: </label>
+            <input type="number" id="minas">
+        </span>
+        <button type="button" onclick="get()">Guardar</button>
+
+    </form>
+
+    <script>
+        function get() {
+            let vertical = document.getElementById("vertical").value;
+            let horizontal = document.getElementById("horizontal").value;
+            let minas = document.getElementById("minas").value;
+
+            if (vertical > 12) vertical = 12;
+            if (vertical < 3) vertical = 3;
+
+            if (horizontal > 31) horizontal = 31;
+            if (horizontal < 3) horizontal = 3;
+
+            if (minas > vertical * horizontal * 0.9) minas = Math.floor(vertical * horizontal * 0.9);
+            if (minas < vertical * horizontal * 0.1) minas = Math.floor(vertical * horizontal * 0.1);
+            if (minas < 1) minas = 1;
+
+            localStorage.setItem("vertical", vertical);
+            localStorage.setItem("horizontal", horizontal);
+            localStorage.setItem("minas", minas);
+
+            console.log(vertical, horizontal, minas);
+        }
+    </script>
+</body>
+</html>
+
+

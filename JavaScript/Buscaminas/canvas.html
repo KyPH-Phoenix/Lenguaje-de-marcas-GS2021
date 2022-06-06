@@ -1,55 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">  
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
-</head> 
+</head>
+
 <body>
+    <a href="configuarcion.html">CONFIGURACION</a>
+    <h1>JUEGO</h1>
+    <button type="button" onclick="draw()">Jugar</button>
+    <br>
+
+    <img style="display: none;" src="https://www.reviversoft.com/blog/wp-content/uploads/2013/03/Minesweeper_Icon.png"
+        alt="mina" id="mina" height="40">
+
+    <img style="display: none;" src="https://images-na.ssl-images-amazon.com/images/I/61Cvq7YZ4xL.png"
+        alt="flag" id="flag" height="40">
     
-    <h1>CONFIGURACION</h1>
-    <p>
-        Introduce los parámetros de tu partida:
-    </p>
-    <form action="GET">
-        <span>
-            <label for="horizontal">Número de casillas horizontales: </label>
-            <input type="number" id="horizontal">
-        </span>
-        <span>
-            <label for="vertical">Número de casillas verticales: </label>
-            <input type="number" id="vertical">
-        </span>
-        <span>
-            <label for="nMinas">Número de minas: </label>
-            <input type="number" id="minas">
-        </span>
-        <button type="button" onclick="get(), draw()">Guardar</button>
+    <br>
 
-    </form>
 
-    <img style="display: none;" src="https://www.reviversoft.com/blog/wp-content/uploads/2013/03/Minesweeper_Icon.png" alt="mina" id="mina" height="40">
-    <br>    
+    
     <canvas id="buscaminas" width="1240" height="480"></canvas>
-
-    <script>
-        function get() {
-            let vertical = document.getElementById("vertical").value;
-            let horizontal = document.getElementById("horizontal").value;
-            let minas = document.getElementById("minas").value;
-
-            if (vertical > 12) vertical = 12;
-            if (horizontal > 31) horizontal = 31;
-            if (minas > (vertical * horizontal) * 0.9) minas = Math.floor(vertical * horizontal * 0.9)
-
-            localStorage.setItem("vertical", vertical);
-            localStorage.setItem("horizontal", horizontal);
-            localStorage.setItem("minas", minas);
-        }
-    </script>
 
     <script src="./buscaminas.js"></script>
 </body>
+
 </html>

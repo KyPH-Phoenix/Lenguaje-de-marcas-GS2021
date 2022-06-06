@@ -35,7 +35,7 @@ function clearCell(col, row) {
         if (board[col][row].clear == false) {
             ctx.fillStyle = "beige";
             ctx.fillRect(row * 40 + 1, col * 40 + 1, 38, 38);
-            ctx.fillStyle = "rgb(143, 143, 92)";
+            ctx.fillStyle = "rgb(255, 153, 0)";
 
             board[col][row].clear = true;
             if (board[col][row].mine == true) {
@@ -46,7 +46,7 @@ function clearCell(col, row) {
                 if (adjacentMines == 0) {
                     clearAdjacentMines(col, row);
                 } else {
-                    ctx.font = "30px Arial";
+                    ctx.font = "30px Comic Sans MS  ";
                     ctx.strokeText(adjacentMines, row * 40 + 10, col * 40 + 30);
                 }
             }
@@ -102,7 +102,7 @@ function draw() {
     let horizontal = Number(localStorage.getItem("horizontal"));
     let vertical = Number(localStorage.getItem("vertical"));
 
-    ctx.fillStyle = "rgb(143, 143, 92)";
+    ctx.fillStyle = "rgb(255, 153, 0)";
     ctx.fillRect(0, 0, 40 * horizontal, 40 * vertical);
 
     console.log(vertical, horizontal);

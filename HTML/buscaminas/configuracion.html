@@ -48,12 +48,23 @@
             function get() {
                 let vertical = document.getElementById("vertical").value;
                 let horizontal = document.getElementById("horizontal").value;
-
+                let minas = document.getElementById("minas").value;
+    
                 if (vertical > 12) vertical = 12;
+                if (vertical < 3) vertical = 3;
+    
                 if (horizontal > 31) horizontal = 31;
-
+                if (horizontal < 3) horizontal = 3;
+    
+                if (minas > vertical * horizontal * 0.9) minas = Math.floor(vertical * horizontal * 0.9);
+                if (minas < vertical * horizontal * 0.1) minas = Math.floor(vertical * horizontal * 0.1);
+                if (minas < 1) minas = 1;
+    
                 localStorage.setItem("vertical", vertical);
                 localStorage.setItem("horizontal", horizontal);
+                localStorage.setItem("minas", minas);
+    
+                console.log(vertical, horizontal, minas);
             }
         </script>
 
