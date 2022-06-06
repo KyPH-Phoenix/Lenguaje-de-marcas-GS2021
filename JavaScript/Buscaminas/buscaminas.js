@@ -60,6 +60,8 @@ function draw() {
         ctx.lineTo(horizontal * 40, drawDistance);
     }
 
+    generateMines();
+
     var mina = document.getElementById("mina");
     ctx.drawImage(mina, 0, 0, 40, 40);
     ctx.drawImage(mina, 80, 160, 40, 40);
@@ -73,4 +75,18 @@ function draw() {
     ctx.stroke();
     ctx.stroke();
     ctx.stroke();
+}
+
+function generateMines() {
+    console.log("Aasdf");
+    console.log(board);    
+
+    let nMinas = Number(localStorage.getItem(minas))
+
+    for (let i = 0; i < nMinas; i++) {
+        let row = Math.floor(Math.random() * horizontal);
+        let column = Math.floor(Math.random() * vertical);
+
+        
+    }
 }
