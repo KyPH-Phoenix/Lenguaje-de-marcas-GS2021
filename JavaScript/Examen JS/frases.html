@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button type="button" onclick="funcio()">Concatena</button>
+    <button type="button" onclick="restart()">Restart</button>
+
+    <script>
+        function funcio() {
+            let frase = localStorage.getItem("frase");
+            let paraula = document.getElementById("input").value;
+
+            if (paraula != "") {
+                if (frase == "null") {
+                    frase = "";
+                    frase += paraula;
+                } else {
+                    frase += " " + paraula;
+                }
+                window.alert(frase);
+                localStorage.setItem("frase", frase);
+            } else {
+                window.alert("La string no pot ser buida")
+            }
+        }
+
+        function restart() {
+            localStorage.setItem("frase", null);
+        }
+    </script>
+</body>
+</html>

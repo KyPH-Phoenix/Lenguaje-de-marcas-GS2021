@@ -12,23 +12,23 @@ const cellHeight = 40;
 var board;
 console.log(board);
 
-canvas.addEventListener("mousedown", function (event) {
-    const boundingRect = canvas.getBoundingClientRect();
-    const x = event.clientX - boundingRect.left;
-    const y = event.clientY - boundingRect.top;
-    const row = Math.floor(x / cellWidth);
-    const col = Math.floor(y / cellHeight);
+    canvas.addEventListener("mousedown", function (event) {
+        const boundingRect = canvas.getBoundingClientRect();
+        const x = event.clientX - boundingRect.left;
+        const y = event.clientY - boundingRect.top;
+        const row = Math.floor(x / cellWidth);
+        const col = Math.floor(y / cellHeight);
 
-    if (event.button == 0) {
-        // Left click
+        if (event.button == 0) {
+            // Left click
 
-        clearCell(col, row);
-    } else if (event.button == 2) {
-        // Right click
+            clearCell(col, row);
+        } else if (event.button == 2) {
+            // Right click
 
-        printFlag(col, row);
-    }
-});
+            printFlag(col, row);
+        }
+    });
 
 function clearCell(col, row) {
     if (board[col][row].flag == false) {

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="200" height="300" style="background-color: green;"></canvas>
+    <img src="https://logospng.org/wp-content/uploads/javascript.png" alt="image" id="image" style="display: none;">
+    <script>
+        // 1
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        // 2
+        ctx.font = "16px";
+        ctx.fillStyle = "red";
+        ctx.fillText("Examen JS", 75, 20);
+
+        // 3
+        ctx.fillStyle = "pink";
+        ctx.strokeStyle = "yellow";
+        ctx.lineWidth = "5";
+        ctx.arc(canvas.width/2, canvas.height/2, 15, 0, 2*Math.PI)
+        ctx.fill();
+        ctx.stroke();
+
+
+        // 4
+        var image = document.getElementById("image");
+        ctx.drawImage(image, 10, 20, 40, 40);
+
+        // 5
+        ctx.fillStyle = ("brown")
+        ctx.fillRect(10, 210, 70, 40);
+
+        // 6
+        canvas.addEventListener("mousedown", function (event) {
+            const boundingRect = canvas.getBoundingClientRect();
+            const x = event.clientX - boundingRect.left;
+            const y = event.clientY - boundingRect.top;
+
+            if (x >= 10 && x <= 80 && y >= 210 && y <= 250) {
+                window.alert("S'ha fet click dins el recuadre");
+            }
+        });
+
+
+    </script>
+</body>
+</html>
