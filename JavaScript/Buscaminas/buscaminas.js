@@ -9,18 +9,20 @@ const canvas = document.getElementById("buscaminas");
 const ctx = canvas.getContext("2d");
 const cellWidth = 40;
 const cellHeight = 40;
+var gameLost = false;
 var board;
 console.log(board);
 
-    canvas.addEventListener("mousedown", function (event) {
-        const boundingRect = canvas.getBoundingClientRect();
-        const x = event.clientX - boundingRect.left;
-        const y = event.clientY - boundingRect.top;
-        const row = Math.floor(x / cellWidth);
-        const col = Math.floor(y / cellHeight);
+canvas.addEventListener("mousedown", function (event) {
+    const boundingRect = canvas.getBoundingClientRect();
+    const x = event.clientX - boundingRect.left;
+    const y = event.clientY - boundingRect.top;
+    const row = Math.floor(x / cellWidth);
+    const col = Math.floor(y / cellHeight);
 
+   if (gameLost == false) {
         if (event.button == 0) {
-            // Left click
+            // Left click.
 
             clearCell(col, row);
         } else if (event.button == 2) {
@@ -28,7 +30,8 @@ console.log(board);
 
             printFlag(col, row);
         }
-    });
+    }
+});
 
 function clearCell(col, row) {
     if (board[col][row].flag == false) {
@@ -39,6 +42,7 @@ function clearCell(col, row) {
 
             board[col][row].clear = true;
             if (board[col][row].mine == true) {
+                gameLost = true
                 ctx.drawImage(mina, row * 40, col * 40, 40, 40);
             } else {
                 let adjacentMines = countMines(col, row);
