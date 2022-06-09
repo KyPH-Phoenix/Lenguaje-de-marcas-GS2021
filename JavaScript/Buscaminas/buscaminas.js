@@ -9,9 +9,12 @@ const canvas = document.getElementById("buscaminas");
 const ctx = canvas.getContext("2d");
 const cellWidth = 40;
 const cellHeight = 40;
-var gameLost = false;
 var board;
 console.log(board);
+var gameLost = false;
+let nMinas;
+let nCasillasSinMina;
+let gameWon = false;
 
 canvas.addEventListener("mousedown", function (event) {
     const boundingRect = canvas.getBoundingClientRect();
@@ -20,7 +23,7 @@ canvas.addEventListener("mousedown", function (event) {
     const row = Math.floor(x / cellWidth);
     const col = Math.floor(y / cellHeight);
 
-   if (gameLost == false) {
+    if (gameLost == false && gameWon == false) {
         if (event.button == 0) {
             // Left click.
 
@@ -30,8 +33,44 @@ canvas.addEventListener("mousedown", function (event) {
 
             printFlag(col, row);
         }
+    } 
+    
+    if (gameLost == true) {
+        clearInterval(timeInterval);
+        revealAllMines();
+        document.getElementById("resultado").innerHTML = "Has perdido";
+    }
+
+    if (gameWon == true) {
+        clearInterval(timeInterval);
+        revealAllMines();
+
+        let imprimirMinutos = minutos;
+        let imprimirSegundos = segundos;
+    
+        if (minutos < 10) {imprimirMinutos = "0" + minutos;}
+        if (segundos < 10) {imprimirSegundos = "0" + segundos;}
+
+        document.getElementById("resultado").innerHTML = "¡Has Ganado!<br>Has completado el juego en: " + imprimirMinutos + ":" + imprimirSegundos;
     }
 });
+
+function revealAllMines() {
+    console.log(board, board.length, board[0].length);
+    for (let i = 0; i < board.length; i++) {
+        for (let j = 0; j < board[i].length; j++) {
+            if (board[i][j].mine == true) {
+                ctx.fillStyle = "beige";
+                ctx.fillRect(j * 40 + 1, i * 40 + 1, 38, 38);
+                ctx.fillStyle = "rgb(143, 143, 92)";
+                ctx.drawImage(mina, j * 40, i * 40, 40, 40);
+            }
+        }
+    }
+}
+
+let segundos = 0;
+let minutos = 0;
 
 function clearCell(col, row) {
     if (board[col][row].flag == false) {
@@ -53,6 +92,9 @@ function clearCell(col, row) {
                     ctx.font = "30px Arial";
                     ctx.strokeText(adjacentMines, row * 40 + 10, col * 40 + 30);
                 }
+
+                nCasillasSinMina--;
+                if (nCasillasSinMina == 0) {gameWon = true}; 
             }
         }
     }
@@ -100,7 +142,37 @@ document.addEventListener("contextmenu", function (event) {
     event.preventDefault();
 });
 
+function timer() {
+    segundos++;
+
+    if (segundos == 60) {
+        minutos++;
+        segundos = 0;
+    }
+
+    let imprimirMinutos = minutos;
+    let imprimirSegundos = segundos;
+
+    if (minutos < 10) {imprimirMinutos = "0" + minutos;}
+    if (segundos < 10) {imprimirSegundos = "0" + segundos;}
+
+    document.getElementById("timer").innerHTML = imprimirMinutos + ":" + imprimirSegundos;
+}
+
+let timeInterval = 0;
+
 function draw() {
+    document.getElementById("resultado").innerHTML = "";
+
+    segundos = 0;
+    minutos = 0;
+    
+    gameLost = false;
+    gameWon = false;
+
+    clearInterval(timeInterval);
+    timeInterval = setInterval(timer, 1000);
+
     ctx.clearRect(0, 0, 1240, 480);
 
     let horizontal = Number(localStorage.getItem("horizontal"));
@@ -140,9 +212,10 @@ function drawBoard(vertical, horizontal) {
 }
 
 function generateMines(vertical, horizontal) {
-    let nMinas = Number(localStorage.getItem("minas"));
+    nMinas = Number(localStorage.getItem("minas"));
+    nCasillasSinMina = vertical * horizontal - nMinas;
 
-    console.log("Numero de minas: " + nMinas);
+    console.log("Numero de minas: " + nMinas + "\nCasillas sin mina: " + nCasillasSinMina);
     console.log(vertical, horizontal);
 
     board = Array(vertical).fill().map(() =>
@@ -150,8 +223,6 @@ function generateMines(vertical, horizontal) {
             new Cell(false, false, false)
         )
     );
-
-    console.log(board);
 
     for (let i = 0; i < nMinas; i++) {
         var row = Math.floor(Math.random() * horizontal);
@@ -165,6 +236,4 @@ function generateMines(vertical, horizontal) {
             i--;
         }
     }
-
-    console.log(board);
 }
